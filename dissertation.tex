@@ -12,12 +12,18 @@
 \usepackage{amsmath}
 \usepackage{multicol}
 \usepackage{enumerate}
-\usepackage{supertabular}
 }
 %\usepackage{ragged2e}
 %\justifying
 \usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{array, booktabs}
+\usepackage{colortbl}
+\usepackage{caption}
+\DeclareCaptionFont{blue}{\color{celeste_ucr}}
+
+\newcommand{\foo}{\color{celeste_ucr}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+
 \graphicspath{{./images/}}
 \title{[PENDING] XLIV Mini-Congreso del CIGEFI}
 \author[Castillo, R; Villegas, R]{Rodrigo Castillo-Rodríguez\\ Roberto Villegas-Díaz}
@@ -63,32 +69,38 @@
 		\begin{center}
 		\begin{tabular}{|l|l|}
 			\hline
-				Nombre 	& NASA Earth Exchange (NEX) Global Daily \\
-						& Downscaled Projections (GDDP) \\
+				Nombre 	& NASA Earth Exchange Global Daily \\
+						& Downscaled Projections (NEX-GDDP) \\
 			\hline
 				Tamaño 	& $12$ TB \\
 			\hline
 				Resolución espacial & $0.25$ grados $\times$ $0.25$ grados\\
 			\hline
+				Cobertura temporal 	& $1950-2005$ historical \\
+									& $2006-2099$ RCP \\
+			\hline
+				Variables 			& \textit{tasmin, tasmax, precipitation} \\
+			\hline 
 		\end{tabular}
 		\end{center}
-		\textbf{Nombre:} NASA Earth Exchange (NEX) Global Daily Downscaled Projections (GDDP)\\
+		\textbf{Nombre:} NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP)\\
 		\textbf{Tamaño:} $12$ TB\\
-		\textbf{Resolución espacial:} $0.25$ grados $\times$ $0.25$ grados
-		
+		\textbf{Resolución espacial:} $0.25$ grados $\times$ $0.25$ grados\\
+		\textbf{Cobertura temporal:} $1950-2005$ historical y $2006-2099$ RCP \\
+		\textbf{Variables:} \textit{tasmin, tasmax, precipitation}
 		 %Purpose: is intended for users who wish to apply the NEX-GDDP dataset in studies of climate change impacts.
 		%\begin{Th1}
-		\begin{figure}[!hbt]
-		   \centering
+		%\begin{figure}[!hbt]
+		   %\centering
 		   %\includegraphics[width=3.5 in]{figuras/celdas1.pdf}
-		\end{figure}
+		%\end{figure}
 		%\end{Th1}
 	\end{frame} 
 
 	% Slide 4
-	\subsection{Celdas de Circulación Atmosférica}
+	\subsection{Climatologías}
 	\begin{frame}
-		\frametitle{Celdas de Circulación Atmosférica}
+		\frametitle{Climatologías}
 		%\begin{Th2}
 		\begin{figure}[!hbt]
 		   \centering
@@ -122,38 +134,52 @@
 
 	% Slide 7
 	\section{Análisis técnico}
-	\subsection{Versiones previas}
+	\subsection{Lenguajes de programación}
 	\begin{frame}
-		\frametitle{Zona de Convergencia Intertropical}
+		\frametitle{Lenguajes de programación}
 		%\begin{Th1}
 		\begin{figure}[!hbt]
 		   \centering
-		   %\includegraphics[width=3.65 in]{figuras/itcz.pdf}
+		   \includegraphics[width=3.65 in]{mathworks.png}\\
+		   \includegraphics[scale=0.4]{anaconda-python.png}
 		\end{figure}
 		%\end{Th1}
 	\end{frame} 
 
 	% Slide 7
+	\subsection{Repositorio de scripts}
 	\begin{frame}
-		\frametitle{Zona de Convergencia Intertropical}
+		\frametitle{Repositorio de scripts}
 		%\begin{Th1}
 		\begin{figure}[!hbt]
 		   \centering
-		   %\includegraphics[width=4.5 in]{figuras/itcz1.pdf}
+		   \includegraphics[width=4 in]{github.png}
 		\end{figure}
+		\textbf{Link: }\href{https://github.com/cigefi}{https://github.com/cigefi}
 		%\end{Th1}
 	\end{frame}
 
 	% Slide 8
-	\subsection{Regímenes de Precipitación Monsónicos}
+	\subsubsection{Evolución}
 	\begin{frame}
-		\frametitle{Regímenes de Precipitación Monsónicos}
-		%\begin{Th1}
-		\begin{figure}[!hbt]
-		   \centering
-		   %\includegraphics[width=4.25 in]{figuras/monson.pdf}
-		\end{figure}
-		%\end{Th1}
+		\frametitle{Evolución}
+		\begin{table}
+			\captionsetup{labelformat=empty}
+			\renewcommand*{\arraystretch}{1.4}
+			\renewcommand{\arrayrulecolor}{celeste_ucr}
+			\captionsetup{singlelinecheck=false, font=blue, labelfont=sc, labelsep=quad}
+			\caption{Línea de tiempo}\vskip -1.5ex
+			\begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{8cm}}
+				\toprule
+				\addlinespace[1.5ex]
+				Oct 15 & \textbf{fileOrganize:} re-ordenamiento de la base de datos\\
+				Nov 15 & \textbf{dataProcessing:} descomposición de los datos (mensuales)\\
+				Dec 15 & \textbf{dataProcessingERSST:} compactación de datos\\
+				Jan 16 & \textbf{climatologies:} climatologías mensuales y estacionales\\
+				Feb 16 & \textbf{filesCheck:} revisión de la integridad de los datos\\
+				Mar 16 & [...]\\
+			\end{tabular}
+		\end{table}
 	\end{frame}
 
 	% Slide 9
