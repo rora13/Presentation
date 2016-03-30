@@ -1,0 +1,204 @@
+\documentclass{beamer}
+\mode<presentation>{
+\usetheme{Warsaw}
+\usecolortheme{sidebartab}
+\setbeamercovered{transparent}
+\usepackage{graphicx}    
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{enumerate}
+}
+%\usepackage{ragged2e}
+%\justifying
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc} 
+
+\title{Conceptos Básicos de la Meteorología Sinóptica}
+\author[\LaTeX{}]{Rodrigo Castillo Rodríguez}
+\institute[CIGEFI]{
+\textbf{Universidad de Costa Rica} \\
+Escuela de Física \\
+\textbf{Centro de Investigaciones Geofísicas} \\
+CIGEFI\\
+
+}
+\date[6 2 2015]{$18$ de noviembre $2015$} 
+
+\titlegraphic{\includegraphics[width=1.8 in]{figuras/escudocigefi.pdf}}
+
+
+\newtheorem{Th1}{Reseña Historica} 
+\newtheorem{Th2}{Definición}
+%\newtheorem{Th3}{Sistemas de Presión Atmosférica [Verano Boreal]}
+%\newtheorem{Th4}{Sistemas de Presión Atmosférica [Verano Austral]}
+%\newtheorem{Th5}{}
+%\newtheorem{Th6}{}
+%\newtheorem{Th7}{}
+
+\makeatletter
+\def\beamer@tocaction@only#1{\only<.(1)>{\usebeamertemplate**{#1}}}
+\define@key{beamertoc}{subsectionsonly}[]{\beamer@toc@subsectionstyle{show/only}\beamer@toc@subsubsectionstyle{show/shaded/hide}}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame} 
+
+\begin{frame}
+%\frametitle{Esquema de trabajo}
+\tableofcontents[subsectionsonly, pausesections] 
+\end{frame}
+
+\section{Circulación General Planetaria}
+\subsection{Regímenes de Vientos}
+\begin{frame}
+\frametitle{Regímenes de Vientos}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=3.5 in]{figuras/celdas1.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame} 
+
+\subsection{Celdas de Circulación Atmosférica}
+\begin{frame}
+\frametitle{Celdas de Circulación Atmosférica}
+%\begin{Th2}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=3.2 in]{figuras/celdas2.pdf}
+\end{figure}
+%\end{Th2}
+\end{frame} 
+
+\subsection{Sistemas de Presión Atmosférica}
+\begin{frame}
+\frametitle{Sistemas de Presión Atmosférica [Verano Boreal]}
+%\begin{Th3}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=3.3 in]{figuras/presion1.pdf}
+\end{figure}
+%\end{Th3}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Sistemas de Presión Atmosférica [Verano Austral]}
+%\begin{Th4}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=3.3 in]{figuras/presion.pdf}
+\end{figure}
+%\end{Th4}
+\end{frame} 
+
+\section{Circulación Atmosférica Tropical}
+\subsection{Zona de Convergencia Intertropical}
+\begin{frame}
+\frametitle{Zona de Convergencia Intertropical}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=3.65 in]{figuras/itcz.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Zona de Convergencia Intertropical}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=4.5 in]{figuras/itcz1.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+
+\subsection{Regímenes de Precipitación Monsónicos}
+\begin{frame}
+\frametitle{Regímenes de Precipitación Monsónicos}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=4.25 in]{figuras/monson.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+
+\section{Principal Modo de Variabilidad Climática}
+\subsection{El Niño - Oscilación del Sur}
+\begin{frame}
+\frametitle{El Niño - Oscilación del Sur}
+\begin{Th1}
+El Niño, término originalmente usado por pescadores peruanos, definido inicialmente como un influjo de aguas costeras cálidas, ricas en nutrientes, provenientes del Golfo de Guayaquil; este influjo que anunciaba buenas capturas pesqueras usualmente ocurre en diciembre por lo cual los pescadores lo asociaron al \textcolor{blue}{nacimiento del niño Jesús (Navidad)}. Desgraciadamente, a este fenómeno de escala local se le superpone el influjo de aguas cálidas provenientes del océano Pacífico tropical, asociadas a la supresión de las surgencias costeras, pobres en nutrientes, lo cual reduce drásticamente la productividad pesquera en toda la región.
+\end{Th1}
+\end{frame} 
+
+\begin{frame}
+\frametitle{ENOS [Fase Neutra]}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=4.4 in]{figuras/neutro.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+
+\begin{frame}
+\frametitle{ENOS [Fase El Niño]}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=4.4 in]{figuras/nino.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+
+\begin{frame}
+\frametitle{ENOS [Fase La Niña]}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=4.4 in]{figuras/nina.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+
+\section{Distribución de Ciclones}
+\subsection{Ciclones y Efecto Coriolis }
+\begin{frame}
+\frametitle{Efecto Coriolis}
+\begin{Th2}
+Es la fuerza aparente que desvía al viento o a cualquier parcela de fluido u objeto en
+movimiento, a la derecha, en el hemisferio norte, o a la izquierda en el hemisferio sur.\\
+El parámetro de coriolis está dada por la siguiente ecuación: 
+\begin{equation}
+f=2\Omega\sin\phi
+\end{equation}
+$\Omega$: velocidad angular terrestre \\
+$\phi$: latitud
+\end{Th2}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Distribución de Ciclones}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=4.5 in]{figuras/ciclones.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visión General}
+%\begin{Th1}
+\begin{figure}[!hbt]
+   \centering
+   \includegraphics[width=3.9 in]{figuras/escalas.pdf}
+\end{figure}
+%\end{Th1}
+\end{frame}
+ 
+\end{document} 
